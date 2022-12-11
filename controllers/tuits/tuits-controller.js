@@ -6,6 +6,12 @@ const initialState = [...tuits]
 const createTuit = (req, res) => {
     const newTuit = req.body;
     newTuit._id = (new Date()).getTime() + '';
+    newTuit.userName = "NASA";
+    newTuit.handle = "nasa";
+    newTuit.image = "/images/nasa.png";
+    newTuit.time = "just now";
+    newTuit.replies = 0;
+    newTuit.retuits = 0;
     newTuit.likes = 0;
     newTuit.liked = false;
     tuits.unshift(newTuit);
